@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: "AIzaSyALeKDD8tLTo6m67kcWCjP5gIRk1S1s7HM",
+    authDomain: "realtdb-esp.firebaseapp.com",
+    databaseURL: "https://realtdb-esp-default-rtdb.firebaseio.com",
+    projectId: "realtdb-esp",
+    storageBucket: "realtdb-esp.appspot.com",
+    messagingSenderId: "606847370636",
+    appId: "1:606847370636:web:22dc5495d6fb3ef8f642a9"
+  }
 };
 
 /*

@@ -7,14 +7,15 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ul>
+    <li *ngFor="let item of items | async">
+      {{item.text}} nombre: {{item.name}}
+      <!-- <input type="text" #updatetext [value]="item.text" /> -->
+      <!-- <button (click)="updateItem(item.key, updatetext.value)">Update</button>
+      <button (click)="deleteItem(item.key)">Delete</button> -->
+    </li>
+  </ul>
+  <input type="text" #newitem />
+  <button (click)="addItem(newitem.value)">Add</button>
+  <button (click)="deleteEverything()">Delete All</button>
 </ion-content>
